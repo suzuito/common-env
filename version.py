@@ -1,6 +1,11 @@
 import re
+import sys
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage version.py <Filename for output>")
+        exit(1)
+    outFilename = sys.argv[1]
     latest_version = ''
     latest_messages = []
     with open('RELEASE.md') as f:
@@ -17,9 +22,9 @@ if __name__ == "__main__":
                     break
     print(latest_version)
     print(latest_messages)
-    with open('LATEST_VERSION', 'w') as f:
+    with open('{}'.format(outFilename), 'w') as f:
         f.write(latest_version)
-    with open('LATEST_VERSION.md', 'w') as f:
+    with open('{}.md'.format(outFilename), 'w') as f:
         f.write('# ' + latest_version)
         f.write('\n')
         for l in latest_messages:

@@ -21,6 +21,3 @@ jobs:
         with:
           name: coverage
           path: /tmp/artifacts
-      - run: python version.py
-      - run: git tag -a `cat LATEST_VERSION` -F LATEST_VERSION.md
-      - run: git push origin `cat LATEST_VERSION`

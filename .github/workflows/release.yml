@@ -1,0 +1,14 @@
+name: release
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: python version.py LATEST_VERSION
+      - run: git tag -a `cat LATEST_VERSION` -F LATEST_VERSION.md
+      - run: git push origin `cat LATEST_VERSION`
