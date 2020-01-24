@@ -10,5 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: python version.py LATEST_VERSION
+      - run: git config --global user.email "auto@example.com"
+      - run: git config --global user.name "auto"
       - run: git tag -a `cat LATEST_VERSION` -F LATEST_VERSION.md
       - run: git push origin `cat LATEST_VERSION`
