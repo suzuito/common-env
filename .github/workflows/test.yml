@@ -19,5 +19,5 @@ jobs:
       - run: ./test
       - uses: actions/upload-artifact@v1
         with:
-          name: artifacts-api
+          name: coverage
           path: /tmp/artifacts
