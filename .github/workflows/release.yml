@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/create-release-by-file
+      - uses: actions/create-release-by-file@master
 #       - run: python version.py LATEST_VERSION
 #       - run: git config --global user.email "auto@example.com"
 #       - run: git config --global user.name "auto"
