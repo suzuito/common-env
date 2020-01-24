@@ -16,6 +16,4 @@ jobs:
       - uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
-      - run: go get -u golang.org/x/lint/golint
-      - run: golint -set_exit_status
       - run: ./test
