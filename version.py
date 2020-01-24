@@ -30,3 +30,4 @@ if __name__ == "__main__":
         for l in latest_messages:
             f.write(l)
             f.write('\n')
+
