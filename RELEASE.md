@@ -1,3 +1,7 @@
+# v1.0.0
+
+- First release!
+
 # v0.0.3
 
 - This is a test!
