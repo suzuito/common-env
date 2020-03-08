@@ -1,3 +1,8 @@
+# v1.1.0
+
+- Support Int64,Float32,Float64
+- Up go version to 1.13.1
+
 # v1.0.1
 
 - Update README.md

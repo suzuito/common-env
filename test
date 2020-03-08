@@ -2,6 +2,7 @@
 
 set -e
 
+rm -rf /tmp/artifacts
 mkdir -p /tmp/artifacts
 go test -timeout 30s ./...
 
